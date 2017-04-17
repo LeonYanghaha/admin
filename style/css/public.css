@@ -1,0 +1,52 @@
+/*
+20170416
+登陆页面
+*/
+.admin_login_div_main{
+    width: 40%;
+    margin: auto;
+   margin-top: 15%;
+}
+.admin_login_iframe_main{
+    border: 2px solid green;
+    width: 50%;
+    height: 20%;
+}
+
+/*20170324
+清除默认的样式
+设置一些固定的样式
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+/*设置a标签的样式*/
+a:link {
+    color: gray;
+    text-decoration:none;
+}
+a:active {
+    color: red;
+}
+a:visited {
+    color:purple;
+    text-decoration:none;
+}
+a:hover {
+    color: black;
+}

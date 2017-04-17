@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title><%=title%></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="<%=path%>/js/jquery.js"></script>
+    <script type="text/javascript" src="<%=path%>/js/bootstrap.min.js"></script>
+    <link href="<%=path%>/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="<%=path%>/css/public.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="<%=path%>/js/public.js"></script>
+</head>
+<body>
+
+<div class="admin_login_div_main">
+    <form action="http://localhost:8081/login" method="get" >
+        <input type="hidden" value="8082" name="url">
+        <div class="form-group">
+            <label for="firstname" class="col-sm-2 control-label">用户名</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="用户名" name="userName">
+                <span class="userName_span">&nbsp;</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="firstname" class="col-sm-2 control-label">密 码</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" placeholder="密码" name="userPassword">
+                <span class="userPassword_span">&nbsp;</span>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-info">提 交</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>
