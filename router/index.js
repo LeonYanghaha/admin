@@ -8,15 +8,7 @@ var config = require('config-lite');
 
 
 module.exports = function(app){
-    app.get(
-        '/login_result',
-        function(req,res){
-            var state = req.query.logint_state;
-            console.log(state);
-            console.log('---------------');
-            res.send(state+"123");
-        }
-    );
+
     /*
      * 20170416
      * 处理以admin 开头的路由。
