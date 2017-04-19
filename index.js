@@ -9,6 +9,7 @@ var route = require('./router/index.js');
 var path = require('path');
 var flash = require('connect-flash');
 var session = require('express-session');
+//var cookieParser = require('cookie');
 
 var app = express();
 
@@ -16,6 +17,9 @@ app.use(function(req, res, next){
     res.locals.session = req.session;
     next();
 });
+
+//设置cookie
+//app.use(cookieParser());
 
 // 设置静态文件目录
 app.use(express.static('style'));

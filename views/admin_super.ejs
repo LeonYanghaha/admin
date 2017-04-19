@@ -1,0 +1,23 @@
+<%- include('./public/head.ejs') %>
+
+
+<h2><%= title  %></h2>
+
+<% if(data==0){ %>
+没有数据
+<% }else{ %>
+<h4>当前页数：<%=data.page_current %></h4>
+<h4>总页数：<%=data.page_count_page %></h4>
+<h4>当前数据</h4>
+<% data.page_data.forEach(function(dataList){  %>
+
+
+管理员的ID：<%=dataList.userId %><br/>
+管理员的头像：<%=dataList.userHead %><br/>
+管理员的名字：<%=dataList.userName %><br/>
+管理员的介绍：<%=dataList.userIntroduce %><br/>
+<hr/>
+<%  }) %>
+<% } %>
+
+<%- include('./public/foot.ejs') %>

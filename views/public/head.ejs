@@ -5,19 +5,11 @@
 </head>
 <body>
 
+
 欢迎管理员：<%= user.userName%>
 <a href="../../admin/logout">退出</a>
 <a href="../../admin/admin_user">用户管理</a>
 <a href="../../admin/admin_photo">图片管理</a>
-
-
-
-
-
-
 <% if(user.userType>30){%>
 <a href="../../admin/admin_super">超级管理员</a>
 <% } %>
-
-</body>
-</html>

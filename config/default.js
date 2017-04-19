@@ -24,5 +24,5 @@ module.exports ={
   db_connectionLimit:15,
   db_name:'photo',
   //首页显示的数据。。加载选项。
-  page_colum:10        //这个配置项的意思是：首页，每次加载的数据条数是10条。
+  page_colum:10      //加载的数据条数是10条。
 };
