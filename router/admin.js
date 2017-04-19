@@ -136,11 +136,7 @@ router.post(
                                 * 成功登录以后，
                                 * 需要往cookie里写入登录信息。
                                 * */
-                                console.log( req.session.user);
-                                console.log("--------------------------------");
-                                console.log( req.cookie);
-                                console.log("--------------------------------");
-                                //console.log( req.cookie.user);
+                                res.cookie ('userMd5',sha1.md5(user.userName));
                                 resolve(1);
                             }else{//登陆失败
                                 resolve(0);
@@ -150,7 +146,7 @@ router.post(
             });
             promise.then(function(value) {
                 if(1==value){
-                    res.render('result',{title:'登录成功',user:req.session.user});
+                    res.render('result',{title:'登录成功',user:req.session.user,userMd5:sha1.md5(req.session.user.userName)});
                 }else{
                     res.render('result',{title:'fail',user:req.session.user});
                 }
