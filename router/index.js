@@ -20,7 +20,8 @@ module.exports = function(app){
     * 跳转到主页
     * 经过中间件的校验，如果当前没有用户登陆，则直接挑到登陆页面。
     * */
-    app.get('/',
+    app.get(
+        '/',
         checkLogin,//检查用户是否登陆，如果没有登陆，则调转到登陆页面
         function(req,res){
             res.render('admin_index',{title:'photo 后台管理主页',user:req.session.user});

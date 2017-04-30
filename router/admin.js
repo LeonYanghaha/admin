@@ -108,6 +108,29 @@ router.get(
     }
 );
 
+
+/*
+ * 20170430
+ * get
+ * 测试的路由
+ * */
+router.get(
+    '/test',
+    function(req,res){
+        var cookuserMd5 = req.cookies.userMd5;
+        try{
+            if(cookuserMd5.length!=32){
+                cookuserMd5 = '0';
+            }
+        }catch (e) {
+            cookuserMd5 = '0';
+        };
+        console.log(cookuserMd5);
+        res.render('result',{title:'fail',user:req.session.user});
+    }
+);
+
+
 /*
  * 20170416
  * post
@@ -121,8 +144,16 @@ router.post(
             var username = data.userName;
             var password = sha1.md5(data.userPassword);
             var user ;
+            var cookuserMd5 = req.cookies.userMd5;
+            try{
+                if(cookuserMd5.length!=32){
+                    cookuserMd5 = '0';
+                }
+            }catch (e) {
+                cookuserMd5 = '0';
+            };
             var promise = new Promise(function(resolve, reject){
-                superagent.get(config.sso_url+"?username="+username+"&password="+password)
+                superagent.get(config.sso_url+"?username="+username+"&password="+password+'&cookies='+cookuserMd5)
                     .end(function(err,result){
                         if(err){//登陆出错
                             reject(0);

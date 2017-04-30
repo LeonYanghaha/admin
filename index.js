@@ -10,6 +10,7 @@ var path = require('path');
 var flash = require('connect-flash');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
+var MongoStore = require('connect-mongo')(session);
 
 var app = express();
 
@@ -30,7 +31,10 @@ app.use(session({
     secret: config.session.secret,
     cookie: {
         maxAge: config.session.maxAge
-    }
+    },
+    store: new MongoStore({// 将 session 存储到 mongodb
+        url: config.mongodb// mongodb 地址
+    })
 }));
 
 //设置模版引擎

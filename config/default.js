@@ -13,6 +13,8 @@ module.exports ={
     key:'user',
     maxAge:2592000000
   },
+  //mongodb 的地址
+  mongodb:'127.0.0.1:27017/photo',
   //主机的链接信息
   host_port:8082,
   host_url:'127.0.0.1',
