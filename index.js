@@ -31,10 +31,10 @@ app.use(session({
     secret: config.session.secret,
     cookie: {
         maxAge: config.session.maxAge
-    },
-    store: new MongoStore({// 将 session 存储到 mongodb
-        url: config.mongodb// mongodb 地址
-    })
+    }//,
+    //store: new MongoStore({// 将 session 存储到 mongodb
+    //    url: config.mongodb// mongodb 地址
+    //})
 }));
 
 //设置模版引擎
