@@ -5,8 +5,6 @@
 
 var checkLogin = require('../middlewares/check.js').checkLogin;
 var config = require('config-lite');
-
-
 module.exports = function(app){
 
     /*
