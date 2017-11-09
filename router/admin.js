@@ -47,7 +47,6 @@ router.get(
         res.redirect('../../admin/admin_super/1');
     }
 );
-
 /*
  * 20170419
  * get
